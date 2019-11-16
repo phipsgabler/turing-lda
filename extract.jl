@@ -21,6 +21,7 @@ open("epigrams.txt", "w") do ef
                 content == "\n"
                 words = (lowercase(m.match) for m in collect(eachmatch(r"\w+", line)))
                 join(ef, words, ' ')
+                write(ef, ' ')
             end
             write(ef, '\n')
         end
