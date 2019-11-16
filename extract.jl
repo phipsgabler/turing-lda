@@ -9,7 +9,7 @@ xroot = root(xdoc)
 xbody = find_element(find_element(xroot, "text"), "body")
 books = child_elements(xbody, "div1")
 
-open("words.txt", "w") do wordfile
+open("epigrams.txt", "w") do ef
     for book in books
         epigrams = child_elements(book, "div2")
         for epigram in epigrams
@@ -20,9 +20,9 @@ open("words.txt", "w") do wordfile
                 line = content(node)
                 content == "\n"
                 words = (lowercase(m.match) for m in collect(eachmatch(r"\w+", line)))
-                join(wordfile, words, ' ')
+                join(ef, words, ' ')
             end
-            write(wordfile, '\n')
+            write(ef, '\n')
         end
     end
 end
