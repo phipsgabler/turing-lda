@@ -1,3 +1,4 @@
 [deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 LightXML = "9c8b4983-aa76-5018-a973-4c85ecc9e179"
 Turing = "fce5fe82-541a-59a6-adf8-730c64b5f9a0"
